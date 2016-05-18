@@ -1,0 +1,272 @@
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Basic styling
+ */
+body {
+  padding: 10px;
+  font-size: 1em;
+  line-height: 1.3em;
+  font-weight: 400;
+  color: #333;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+}
+
+/**
+ * Readable text
+ */
+p, blockquote, dd, dt {
+  font-family:
+  text-align:  justify;
+  -moz-text-align-last: left; /* Code for Firefox */
+  text-align-last:  left;
+}
+
+/**
+ * bordered element
+ */
+ figure, blockquote, pre, code {
+  background-color: #BBB;
+  box-sizing: border-box;
+  border-radius: 1px;
+  border: 1px solid #333;
+ }
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+
+table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: keep-all;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th, td {
+  padding: 6px 13px;
+  border: 1px solid #333;
+}
+
+th {
+  font-weight: bold;
+  font-family: sans;
+}
+
+tr {
+  background-color: #F3F3F3;
+
+  &:nth-child(2n) {
+    background-color: #F1F1F1;
+  }
+}
+
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+  margin-bottom: 3em / 2;
+}
+
+h1, h2, h3, h4 ,h5, h6,
+ul, ol, dl, figure {
+  font-family: sans;
+  margin: 10px;
+}
+
+/**
+ * Images
+ */
+img {
+  margin: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+
+
+/**
+ * Figures
+ */
+figure > img {
+  display: block;
+}
+
+figcaption {
+  font-size: 0.8em;
+}
+
+/**
+ * Lists
+ */
+ul, ol {
+  margin-left: 3em;
+}
+
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+dl {
+  padding: 0px;
+}
+
+dt {
+  font-weight: 600;
+  color: #333;
+  font-family: sans;
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+
+/**
+ * Headings
+ */
+header {
+  font-family: sans;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: blue;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+h3, {
+  font-size: 1.6em;
+}
+
+h4, h5, h6 {
+  font-size: 1.4em;
+}
+
+/**
+ * Links
+ */
+a {
+  color: blue;
+  text-decoration: none;
+
+  &:hover, &:visited {
+    color: blue;
+    text-decoration: underline;
+  }
+}
+
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+  color: #333;
+  border-left: 2px solid #333;
+  background-color: #f1f1f1;
+  padding: 3em / 2;
+  font-size: 1em;
+  font-style: italic;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+  font-family: monospace;
+  white-space: pre-wrap;
+  marging: 0;
+}
+
+code {
+  padding: 1px 5px 1px;
+}
+
+pre {
+  border-left: 2px solid blue;
+  border-radius: 1px;
+  padding: 5px;
+
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+/**
+ * Wrapper
+ */
+.wrapper {
+  max-width: -webkit-calc(#{800px} - (#{3em} * 2));
+  max-width:         calc(#{800px} - (#{3em} * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 3em;
+  padding-left: 3em;
+  @extend %clearfix;
+
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{800px} - (#{3em}));
+    max-width:         calc(#{800px} - (#{3em}));
+    padding-right: 3em / 2;
+    padding-left: 3em / 2;
+  }
+}
+
+
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+
+.post-date {
+  font-family: monospace;
+}
